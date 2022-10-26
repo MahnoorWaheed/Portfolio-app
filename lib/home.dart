@@ -13,18 +13,20 @@ class _MyHomeState extends State<MyHome> {
   aboutAchivements(num, type) {
     return Row(
       children: [
-        Text(num,
+        Text("${num}:",
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               fontFamily: "Soho",
             )),
         Container(
-            margin: EdgeInsets.only(top: 10),
+            // margin: EdgeInsets.only(top: 10),
             child: Text(
               type,
+
               style: TextStyle(
                 fontFamily: "Soho",
+                fontSize: 15,
               ),
             ))
       ],
@@ -182,15 +184,9 @@ class _MyHomeState extends State<MyHome> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      aboutAchivements('6', ' Projects'),
-                      aboutAchivements('2', ' Clients'),
-                      aboutAchivements('3', ' Companies'),
-                    ],
-                  ),
-                  
+                  aboutAchivements('Education', '   Bachelors in Cs'),
+                  aboutAchivements('Country', '    Pakistan'),
+                  aboutAchivements('Experience', '   One Year'),
                   SizedBox(
                     height: 30,
                   ),
@@ -210,17 +206,37 @@ class _MyHomeState extends State<MyHome> {
                       
                       mySpec(FontAwesomeIcons.android, 'Android'),
                       mySpec(FontAwesomeIcons.github, 'GitHub'),
-                      mySpec(FontAwesomeIcons.modx, 'Agile'),
+                     mySpec(FontAwesomeIcons.bug, 'Bug solving'),
                       
                     ],
                   ),
-                   SizedBox(
-                    height: 10,
-                  ),
-                   mySpec(FontAwesomeIcons.bug, 'Bug solving'),
                   SizedBox(
                     height: 10,
                   ),
+                    mySpec(FontAwesomeIcons.spinner, 'Agile'),
+                   SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'Frame Work',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: "Soho",
+                        fontWeight: FontWeight.bold),
+                  ),
+                    SizedBox(
+                    height: 10,
+                  ),
+                   mySpec(FontAwesomeIcons.f, 'Flutter'),
+                    SizedBox(
+                    height: 10,
+                  ),
+                   aboutAchivements('StateManagement', '   Getx, Provider'),
+                   aboutAchivements('Backend', '   Firebase and API'),
+                    SizedBox(
+                    height: 10,
+                  ),
+                  
                   const Text(
                     'Tools',textAlign: TextAlign.start,
             
@@ -255,7 +271,11 @@ class _MyHomeState extends State<MyHome> {
                   SizedBox(
                     height: 10,
                   ),
-mySpec(FontAwesomeIcons.slack, 'Slack'),
+              mySpec(FontAwesomeIcons.slack, 'Slack'),
+
+SizedBox(
+                    height: 40,
+                  ),
                 ],
               ),
             ),
@@ -263,48 +283,6 @@ mySpec(FontAwesomeIcons.slack, 'Slack'),
         },
       ),
 
-      // body: Container(
-      //   child: Stack(
-      //     children: [
-      //       Container(
-      //         margin: EdgeInsets.only(top: 35),
-      //         child: ShaderMask(
-      //           shaderCallback: (rect) {
-      //             return LinearGradient(
-      //               begin: Alignment.center,
-      //               end: Alignment.bottomCenter,
-      //               colors: [Colors.black, Colors.transparent],
-      //             ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
-      //           },
-      //           blendMode: BlendMode.dstIn,
-      //           child: Image.asset(
-      //             'assests/bnw.png',
-      //             height: 400,
-      //             fit: BoxFit.contain,
-      //           ),
-      //         ),
-      //       ),
-      //       Container(
-      //         alignment: Alignment.center,
-      //         margin: EdgeInsets.only(
-      //             top: MediaQuery.of(context).size.height * 0.49),
-      //         child: Column(
-      //           children: [
-      //             Text('Siddharth Chopra',
-      //                 style: TextStyle(color: Colors.white, fontSize: 40)),
-      //             SizedBox(
-      //               height: 10,
-      //             ),
-      //             Text(
-      //               'Software Developer',
-      //               style: TextStyle(color: Colors.white, fontSize: 20),
-      //             ),
-      //           ],
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }
