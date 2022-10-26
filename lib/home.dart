@@ -125,7 +125,7 @@ class _MyHomeState extends State<MyHome> {
           child: Stack(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 35),
+                margin: EdgeInsets.only(top: 0),
                 child: ShaderMask(
                   shaderCallback: (rect) {
                     return LinearGradient(
