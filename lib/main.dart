@@ -50,17 +50,17 @@ class _MyAppState extends State<MyApp> {
                   ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
                 },
                 blendMode: BlendMode.dstIn,
-                child: Image.asset(
-                  'assests/mahnoor.jpg',
-                  height: double.infinity,
-                  fit: BoxFit.fill,
-                ),
+                // child: Image.asset(
+                //   'assests/mahnoor.jpg',
+                //   height: double.infinity,
+                //   fit: BoxFit.fill,
+                // ),
               ),
             ),
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.55),
+                  top: MediaQuery.of(context).size.height * 0.3),
               child: Column(
                 children: [
                   SizedBox(
